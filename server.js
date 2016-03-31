@@ -23,12 +23,14 @@ mongoose.connection.once('open', function() {
 
 
 //TOURNAMENT ENDPOINTS//
-app.post('/api/tournament', mainCtrl.postTournament);
-app.get('/api/tournament', mainCtrl.getTournaments);
+app.post('/api/tournaments', mainCtrl.postTournament);
+app.get('/api/tournaments', mainCtrl.getTournaments);
 
 //GAMES ENDPOINTS//
 app.post('/api/games', mainCtrl.postGame);
 
+//TEAMS ENDPOINTS//
+app.post('/api/teams', mainCtrl.postTeam);
 
 //PORT//
 var port = process.env.PORT || 3000;

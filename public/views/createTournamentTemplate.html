@@ -1,11 +1,30 @@
-<div class='makeGameContainer'>	
+
+
+<div class='makeTournamentContainer'>
+	<h1>Tournament Name</h1>
+	<input class='tournamentNameInput' type="text" placeholder="Enter Tournament Name" ng-model="tempTournament">
+	<button ng-click="saveTournamentName()">Save Tournament Name</button>
 	<h1>Team Name</h1>
-	<input class='team one' type='text' placeholder="Enter Team Name">
+	<input class='team one' type='text' placeholder="Enter Team Name" ng-model="tempTeam">
+	<button ng-click="saveTeamName()">Save Team Name</button>
+	
+	{{team.name}}
 	<br>
 	<h1>Team Members</h1>
-	<input class='team members' type ='text' placeholder="Enter Team Members">
+	<input class='team members' type ='text' placeholder="Enter Team Members" ng-model="tempMember">
+	<button ng-click="saveTeamMember()">Save Team Member</button>
+	<div ng-repeat="member in team.members">
+		{{member}}
+	</div>
 	<br>
-	<button>Save Team</button>
+	<button ng-click=saveTeam()>Save Team</button>
+	<div ng-show='successNotice'>
+		<p>Team Saved Successfully</p>
+	</div>
+	
+	<div ng-show='showTeam'>
+		<p>{{teamData.name}}</p>
+	</div>
 	
 </div>
 <br>

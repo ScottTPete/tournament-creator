@@ -16,6 +16,16 @@ angular.module('tournamentCreatorApp', ['ui.router'])
 				templateUrl: '../views/createTournamentTemplate.html',
 				controller: 'createCtrl'
 			})
+			.state('active', {
+				url: '/activeTournaments',
+				templateUrl: '../views/activeTournamentsTemplate.html',
+				controller: ''
+			})
+			.state('completed', {
+				url: '/completedTournaments',
+				templateUrl: '../views/completedTournamentsTemplate.html',
+				controller: ''
+			})
 			
 		$urlRouterProvider.otherwise('/');
 	})
